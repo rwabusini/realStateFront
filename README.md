@@ -1,16 +1,59 @@
-# React + Vite
+# Property Manager – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive property management dashboard built with React, Vite, and Redux Toolkit. Connects to a Laravel 12 backend API for authentication and property data.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- JWT-based login/logout
+- Protected dashboard route
+- Property listing with real-time data
+- Clean, responsive UI
+- Redux Toolkit for state management
+- Vite-powered fast development
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 18 + Vite
+- React Router v6
+- Redux Toolkit
+- Axios
+- CSS (inline styles)
 
-## Expanding the ESLint configuration
+## 📦 Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [Node.js](https://nodejs.org/) v18+
+- npm or yarn
+- Running Laravel backend API at `http://localhost:8000`  
+  → [Property Manager Backend](https://github.com/your-username/property-manager-backend)
+
+## 🚀 Setup
+
+1. Clone and install:
+   ```bash
+   git clone https://github.com/your-username/property-manager-frontend.git
+   cd property-manager-frontend
+   npm install
+
+
+2. Start dev server:
+```bash
+npm run dev
+
+```
+Open: http://localhost:5173
+
+⚙️ Configuration
+If your Laravel backend runs on a different URL, create .env in the root:
+
+``env
+VITE_API_BASE_URL=http://localhost:8000/api
+
+Then update your API service to use import.meta.env.VITE_API_BASE_URL.
+
+📤 Deployment
+Build for production:
+
+```bash
+npm run build
+```
+Deploy to Vercel, Netlify, or GitHub Pages.
