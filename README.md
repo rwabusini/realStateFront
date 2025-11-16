@@ -45,9 +45,9 @@ Open: http://localhost:5173
 ⚙️ Configuration
 If your Laravel backend runs on a different URL, create .env in the root:
 
-``env
+```env
 VITE_API_BASE_URL=http://localhost:8000/api
-
+```
 Then update your API service to use import.meta.env.VITE_API_BASE_URL.
 
 📤 Deployment
